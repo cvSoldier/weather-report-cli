@@ -15,7 +15,7 @@
     "blessed": "^0.1.81",
     "cheerio": "^1.0.0-rc.12",
     "commander": "^9.4.0",
-    "inquirer": "^8.2.4"
+    "ws": "^8.13.0"
   },
   "license": "ISC"
 }
