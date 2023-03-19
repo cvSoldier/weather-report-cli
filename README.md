@@ -1,5 +1,5 @@
 # weather-report-cli
-偷偷浏览弱智吧的摸鱼工具，而且只能看一页，take a break ✅，放任ddl不管 ❌
+偷偷浏览弱智吧的摸鱼工具，只能看首页所有帖子，take a break ✅，放任ddl不管 ❌
 
 # Install
 ```
