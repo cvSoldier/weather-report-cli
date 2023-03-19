@@ -9,20 +9,19 @@ function getLastIndex(arr) {
     if(arr[back].startsWith('title')) return back
   }
 }
+// 初始化屏幕和列表组件
+const screen = blessed.screen({
+  fullUnicode: true,
+  smartCSR: true
+});
 
 exports.render = function (data, ids) {
-  // 初始化屏幕和列表组件
-  const screen = blessed.screen({
-    fullUnicode: true,
-    smartCSR: true
-  });
-
   const list = blessed.list({
     parent: screen,
     top: 0,
     left: 0,
     width: '100%',
-    height: '100%-1',
+    height: '100%-2',
     style: {
       selected: {
         fg: 'yellow',
@@ -36,7 +35,7 @@ exports.render = function (data, ids) {
     bottom: 0,
     left: 0,
     width: '100%',
-    height: 2,
+    height: 1,
     content: 'Use arrow keys to navigate, press q to quit'
   });
   
@@ -65,5 +64,20 @@ exports.render = function (data, ids) {
   });
 
   // 显示屏幕
+  screen.render();
+}
+
+let onlineNums = 0
+exports.setUserNum = function(num) {
+  if(onlineNums === num) return
+
+  blessed.text({
+    parent: screen,
+    bottom: 1,
+    left: 0,
+    width: '100%',
+    height: 1,
+    content: 'online user num: ' + num
+  });
   screen.render();
 }
