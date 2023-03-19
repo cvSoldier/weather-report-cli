@@ -1,6 +1,6 @@
 {
   "name": "weather-report-cli",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "weather report",
   "bin": {
     "wc": "./bin/index.js"
